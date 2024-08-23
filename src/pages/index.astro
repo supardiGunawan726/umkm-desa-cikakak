@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<section class="p-4 relative">
+			<img src="./hero.jpg" alt="foto anggota KKN desa Cikakak di pantai Citepus" class="absolute inset-0 w-full h-full object-cover">
+			<div class="absolute inset-0 backdrop-blur-[2px]"></div>
+			<div class="relative aspect-video flex flex-col items-center justify-center md:aspect-auto md:min-h-[300px]">
+				<h1 class="text-center text-white font-semibold font-playfair-display text-2xl md:text-4xl lg:text-5xl">Dari Pesisir Selatan Jawa Barat ke Dunia</h1>
+				<p class="text-center text-gray-50 mt-2 md:text-xl md:mt-4">Jala Laut (Cast Net) dan Anyaman Bambu Berkualitas Tinggi</p>
+			</div>
+		</section>
+		<section class="grid gap-6 px-4 py-8 container mx-auto items-center md:grid-cols-2">
+				<h2 class="font-playfair-display font-bold text-4xl md:text-4xl md:leading-[1.4] lg:text-5xl lg:leading-[1.5]">Temukan keunggulan produk lokal manifestasi budaya dari Pesisir Selatan Jawa Barat</h2>
+				<p class="text-gray-600">Produk yang dirancang khusus untuk memenuhi kebutuhan dalam bidang perikanan dan kerajinan tradisional. Kami menghadirkan jala/jaring ikan tebar berkualitas tinggi, dirancang sesuai dengan kebutuhan, ideal untuk nelayan dan pebisnis sektor perikanan yang mengutamakan keandalan dan ketahanan dalam menangkap hasil laut. Selain itu, kami juga menawarkan kerajinan anyaman bambu yang dibuat dengan teknik tradisional, menghasilkan barang dan alat yang estetis dan fungsional, cocok untuk keperluan rumah tangga, usaha, serta dekorasi. Dukung produk asli Indonesia yang membawa sentuhan kearifan lokal ke dalam bisnis perikanan dan kehidupan sehari-hari Anda, dengan kualitas yang siap bersaing di pasar global.</p>
+		</section>
+		<section class="container px-4 py-8 mx-auto grid grid-cols-6 grid-rows-4 gap-2">
+			<figure class="col-span-4 row-span-4 relative">
+				<div class="absolute inset-0 bg-black/20 flex flex-col items-center justify-center gap-4 transition-opacity duration-200 ease-in-out opacity-0 hover:opacity-100">
+					<h2 class="text-white font-semibold font-playfair-display text-xl">Hihid</h2>
+					<a href="/umkm/umkm-anyaman" class="border border-white px-2 py-1 rounded-full text-sm text-white font-medium">Lihat detail</a>
+				</div>
+				<img class="w-full h-full aspect-square md:aspect-video object-contain object-center bg-emerald-50" src="./products/product-1.png" alt="product 1">
+			</figure>
+			<figure class="col-span-2 row-span-2 relative">
+				<div class="absolute inset-0 bg-black/20 flex flex-col items-center justify-center gap-4 transition-opacity duration-200 ease-in-out opacity-0 hover:opacity-100">
+					<h2 class="text-white font-semibold font-playfair-display text-xl">Tolok</h2>
+					<a href="/umkm/umkm-anyaman" class="border border-white px-2 py-1 rounded-full text-sm text-white font-medium">Lihat detail</a>
+				</div>
+				<img class="w-full h-full aspect-square md:aspect-video object-contain object-center bg-blue-100" src="./products/product-2.png" alt="product 2">
+			</figure>
+			<figure class="col-span-2 row-span-2 relative">
+				<div class="absolute inset-0 bg-black/20 flex flex-col items-center justify-center gap-4 transition-opacity duration-200 ease-in-out opacity-0 hover:opacity-100">
+					<h2 class="text-white font-semibold font-playfair-display text-xl">Aseupan</h2>
+					<a href="/umkm/umkm-anyaman" class="border border-white px-2 py-1 rounded-full text-sm text-white font-medium">Lihat detail</a>
+				</div>
+				<img class="w-full h-full aspect-square md:aspect-video object-contain object-center bg-red-100" src="./products/product-3.png" alt="product 3">
+			</figure>
+			<figure class="col-span-3 row-span-3 relative">
+				<div class="absolute inset-0 bg-black/20 flex flex-col items-center justify-center gap-4 transition-opacity duration-200 ease-in-out opacity-0 hover:opacity-100">
+					<h2 class="text-white font-semibold font-playfair-display text-xl">Jala</h2>
+					<a href="/umkm/umkm-jala" class="border border-white px-2 py-1 rounded-full text-sm text-white font-medium">Lihat detail</a>
+				</div>
+				<img class="w-full h-full aspect-square md:aspect-video object-contain object-center bg-amber-50" src="./products/product-4.png" alt="product 4">
+			</figure>
+			<figure class="col-span-3 row-span-3 relative">
+				<div class="absolute inset-0 bg-black/20 flex flex-col items-center justify-center gap-4 transition-opacity duration-200 ease-in-out opacity-0 hover:opacity-100">
+					<h2 class="text-white font-semibold font-playfair-display text-xl">Barera dan Coban</h2>
+					<a href="/umkm/umkm-jala" class="border border-white px-2 py-1 rounded-full text-sm text-white font-medium">Lihat detail</a>
+				</div>
+				<img class="w-full h-full aspect-square md:aspect-video object-contain object-center bg-violet-50" src="./products/product-5.png" alt="product 4">
+			</figure>
+		</section>
+	</main>
+</Layout>
+

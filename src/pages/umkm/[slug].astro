@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import EnterpriseLayout from '../../layouts/EnterpriseLayout.astro';
+
+export async function getStaticPaths() {
+  const enterpriseEntries = await getCollection('enterprise');
+  return enterpriseEntries.map(enterprise => ({
+    params: { slug: enterprise.slug }, props: { enterprise },
+  }));
+}
+
+const { enterprise } = Astro.props;
+
+const { Content } = await enterprise.render();
+
+---
+<EnterpriseLayout enterprise={enterprise.data}>
+  <article class="prose max-w-none prose-p:text-justify">
+    <Content/>
+  </article>
+</EnterpriseLayout>
