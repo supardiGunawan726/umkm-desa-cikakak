@@ -7,7 +7,7 @@ interface Props {
 }
 
 const { enterprise } = Astro.props;
-const { bannerImg, name, owner, phoneNumber, category, mapEmbedUrl } = enterprise;
+const { bannerImg, name, owner, phoneNumber, category, harga, mapEmbedUrl } = enterprise;
 ---
 
 <Layout title={name}>
@@ -38,7 +38,7 @@ const { bannerImg, name, owner, phoneNumber, category, mapEmbedUrl } = enterpris
         <slot/>
       </div>
     </div>
-    <section class="hidden p-4 lg:grid gap-2.5 lg:p-0 lg:h-max lg:sticky lg:top-0 ">
+    <section class="hidden p-4 lg:grid gap-2.5 lg:p-0 lg:h-max lg:sticky lg:top-6">
       <div class="grid gap-1.5 lg:bg-white lg:border lg:border-gray-200 lg:rounded-lg lg:overflow-hidden lg:p-4">
         <h2 class="text-lg font-medium">Kontak</h2>
         <div class="text-gray-500 font-light grid gap-0.5">
@@ -52,6 +52,10 @@ const { bannerImg, name, owner, phoneNumber, category, mapEmbedUrl } = enterpris
       <div class="grid gap-1.5 lg:bg-white lg:border lg:border-gray-200 lg:rounded-lg lg:overflow-hidden lg:p-4">
         <h2 class="text-lg font-medium">Kategory</h2>
         <p class="text-gray-500 font-light">{category}</p>
+      </div>
+      <div class="grid gap-1.5 lg:bg-white lg:border lg:border-gray-200 lg:rounded-lg lg:overflow-hidden lg:p-4">
+        <h2 class="text-lg font-medium">Harga</h2>
+        <p class="text-gray-500 font-light">{harga}</p>
       </div>
       <div class="grid gap-1.5 lg:bg-white lg:border lg:border-gray-200 lg:rounded-lg lg:overflow-hidden lg:p-4">
         <h2 class="text-lg font-medium">Lokasi</h2>

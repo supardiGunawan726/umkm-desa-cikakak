@@ -1,0 +1,222 @@
+---
+import Layout from "../../layouts/Layout.astro"
+
+function stringToHslColor(
+    str: string,
+    saturation: number,
+    lightness: number,
+) {
+    let hash = 0
+    for (let i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash)
+    }
+    const h = Math.abs(hash % 360)
+    return 'hsl(' + h + ', ' + saturation + '%, ' + lightness + '%)'
+}
+
+const team = [
+  {
+    name: "Drs. Nuzwan Sudariana M.M",
+    role: "Dosen Pembimbing",
+    bgColor: stringToHslColor("Drs. Nuzwan Sudariana M.M", 30, 50),
+    profileImg: "/team/Drs. Nuzwan Sudariana M.M.png",
+  },
+  {
+    name: "Fakhraj",
+    role: "Ketua",
+    bgColor: stringToHslColor("Muhammad Fakhraj Jaelani", 30, 50),
+    profileImg: "/team/Muhammad Fakhraj Jaelani.png",
+  },
+  {
+    name: "Rifda",
+    role: "Sekretaris",
+    bgColor: stringToHslColor("M. Rifda Firdaus. S", 30, 50),
+    profileImg: "/team/M. Rifda Firdaus. S.png",
+  },
+  {
+    name: "Sheva",
+    role: "Bendahara I",
+    bgColor: stringToHslColor("Muhammad Sheva", 30, 50),
+    profileImg: "/team/Muhammad Sheva.png",
+  },
+  {
+    name: "Pardi",
+    role: "Bendahara II",
+    bgColor: stringToHslColor("Supardi G", 30, 50),
+    profileImg: "/team/Supardi G.png",
+  },
+  {
+    name: "Rahman",
+    role: "Divisi Acara",
+    bgColor: stringToHslColor("Rahman Rizaluddin", 30, 50),
+    profileImg: "/team/Rahman Rizaluddin.png",
+  },
+  {
+    name: "Syawalia",
+    role: "Divisi Acara",
+    bgColor: stringToHslColor("Syawalia Rahmah M", 30, 50),
+    profileImg: "/team/Syawalia Rahmah M.png",
+  },
+  {
+    name: "Irpan",
+    role: "Divisi Acara",
+    bgColor: stringToHslColor("Irpan Jaelani", 30, 50),
+    profileImg: "/team/Irpan Jaelani.png",
+  },
+  {
+    name: "Munaa",
+    role: "Divisi PDD",
+    bgColor: stringToHslColor("Munaa Muslimah", 30, 50),
+    profileImg: "/team/Munaa Muslimah.png",
+  },
+  {
+    name: "Anisa",
+    role: "Divisi PDD",
+    bgColor: stringToHslColor("Anisa Rosdiani", 30, 50),
+    profileImg: "/team/Anisa Rosdiani.png",
+  },
+  {
+    name: "Ananda",
+    role: "Divisi PDD",
+    bgColor: stringToHslColor("Ananda Akbar", 30, 50),
+    profileImg: "/team/Ananda Akbar.png",
+  },
+  {
+    name: "Ayu",
+    role: "Divisi Humas",
+    bgColor: stringToHslColor("Ayu Widia Pasha", 30, 50),
+    profileImg: "/team/Ayu Widia Pasha.png",
+  },
+  {
+    name: "Neni",
+    role: "Divisi Humas",
+    bgColor: stringToHslColor("Neni Wahyuni", 30, 50),
+    profileImg: "/team/Neni Wahyuni.png",
+  },
+  {
+    name: "Fadlan",
+    role: "Divisi Humas",
+    bgColor: stringToHslColor("Muhammad Fadlan Firdaus", 30, 50),
+    profileImg: "/team/Muhammad Fadlan Firdaus.png",
+  },
+  {
+    name: "Chalysta",
+    role: "Divisi Logistik",
+    bgColor: stringToHslColor("Chalysta Shabira Arnaz", 30, 50),
+    profileImg: "/team/Chalysta Shabira Arnaz.png",
+  },
+  {
+    name: "Nadia",
+    role: "Divisi Logistik",
+    bgColor: stringToHslColor("Nadia Awaliyah", 30, 50),
+    profileImg: "/team/Nadia Awaliyah.png",
+  },
+  {
+    name: "Agisna",
+    role: "Divisi Logistik",
+    bgColor: stringToHslColor("Agisna Ananta Gibral", 30, 50),
+    profileImg: "/team/Agisna Ananta Gibral.png",
+  },
+  {
+    name: "Asep",
+    role: "Divisi Logistik",
+    bgColor: stringToHslColor("Asep kurniawan", 30, 50),
+    profileImg: "/team/Asep kurniawan.png",
+  },
+  {
+    name: "Mikael",
+    role: "Divisi Logistik",
+    bgColor: stringToHslColor("Mikael Tabuni", 30, 50),
+    profileImg: "/team/Mikael Tabuni.png",
+  },
+]
+---
+
+<Layout title="Tentang">
+  <main>
+    <section 
+        style="background-image:
+        linear-gradient(to right, rgba(203, 213, 225, 0.2) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(203, 213, 225, 0.2) 1px, transparent 1px);
+        background-size: 2.5rem 2.5rem;
+        background-position: center center;"
+      >
+      <div class="container mx-auto pt-4 px-4 flex flex-col gap-1 md:items-center md:text-center md:pt-10 md:gap-4 lg:pt-16">
+        <h1 class="font-playfair-display font-medium leading-normal text-2xl md:text-4xl lg:text-5xl">Bersama UMKM Desa Cikakak, lebih maju</h1>
+        <p class="text-gray-600 max-w-[500px]">Kami adalah mahasiswa Universitas Nusa Putra yang sedang KKN di Desa Cikakak periode Agustus 2024</p>
+      </div>
+    </section>
+    <section
+      class="pt-8 pb-4"
+      style="background-image:
+      linear-gradient(to right, rgba(203, 213, 225, 0.2) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(203, 213, 225, 0.2) 1px, transparent 1px);
+      background-size: 2.5rem 2.5rem;
+      background-position: center center;"
+    >
+      <div class="w-full overflow-hidden inline-flex">
+        <ul class="flex items-center gap-1.5 overflow-visible px-2 animate-infinite-scroll">
+          {team.map(member => (
+            <li>
+              <figure class="aspect-[3/4] relative min-w-[80px] overflow-hidden from-gray-200 to-gray-300 bg-gradient-to-br grayscale hover:grayscale-0 md:min-w-[100px] lg:min-w-[120px]">
+                <img class="absolute inset-0 object-cover object-center scale-[1.2] translate-y-[-2%]" src={member.profileImg} alt={`picture of ${member.name}`}>
+                <div class="absolute bottom-1 left-1 right-1 z-10 bg-white px-1">
+                  <p class="text-[10px] font-medium line-clamp-1 hover:line-clamp-none md:text-xs lg:text-sm">{member.name}</p>
+                  <p class="text-[8px] font-light italic md:text-[10px]">{member.role}</p>
+                </div>
+              </figure>
+            </li>
+          ))}
+        </ul>
+        <ul class="flex items-center gap-1.5 overflow-visible px-4 animate-infinite-scroll">
+          {team.map(member => (
+            <li>
+              <figure class="aspect-[3/4] relative min-w-[80px] overflow-hidden from-gray-200 to-gray-300 bg-gradient-to-br grayscale hover:grayscale-0 md:min-w-[100px] lg:min-w-[120px]">
+                <img class="absolute inset-0 object-cover object-center scale-[1.2] translate-y-[-2%]" src={member.profileImg} alt={`picture of ${member.name}`}>
+                <div class="absolute bottom-1 left-1 right-1 z-10 bg-white px-1">
+                  <p class="text-[10px] font-medium line-clamp-1 hover:line-clamp-none md:text-xs lg:text-sm">{member.name}</p>
+                  <p class="text-[8px] font-light italic md:text-[10px]">{member.role}</p>
+                </div>
+              </figure>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+    <section class="grid items-center gap-6 px-4 py-12 container mx-auto md:grid-cols-2 md:py-16">
+      <h2 class="font-playfair-display font-bold text-4xl md:text-4xl md:leading-[1.4] lg:text-5xl lg:leading-[1.5]">Fungsi dan Manfaat Program Kerja UMKM</h2>
+      <p class="text-gray-600">Tujuan kegiatan ini adalah untuk mendorong peningkatan daya saing UMKM di Desa Cikakak dengan memanfaatkan teknologi digital secara optimal, terutama dalam hal pemasaran produk. Dengan demikian, diharapkan UMKM di desa ini dapat bersaing lebih efektif di pasar yang semakin kompetitif. Selain itu, kegiatan ini juga bertujuan untuk memperluas jangkauan pasar produk UMKM Desa Cikakak, sehingga produk-produk lokal dapat dikenal lebih luas dan diterima oleh pasar yang lebih besar, baik di tingkat regional maupun nasional.</p>
+		</section>
+    <section class="container mx-auto px-4 grid gap-8 max-w-[700px]">
+      <h2 class="font-playfair-display font-bold text-center text-4xl md:text-4xl md:leading-[1.4] lg:text-5xl lg:leading-[1.5]">Pelaku Usaha UMKM</h2>
+      <div class="grid gap-2 md:grid-cols-6 md:gap-8 md:items-center">
+        <img class="from-gray-200 to-gray-300 bg-gradient-to-br md:col-span-2" src="/enterprise-owner/Aliyudin.png" alt="Aliyudin">
+        <img class="from-gray-200 to-gray-300 bg-gradient-to-br md:row-start-2 md:col-span-2" src="/products/product-1.png" alt="Hihid">
+        <div class="grid gap-2 h-max md:row-span-2 md:col-span-4">
+          <h3 class="font-playfair-display font-bold text-2xl md:text-3xl md:leading-[1.4] lg:text-4xl lg:leading-[1.5]">Bapak Aliyudin</h3>
+          <p class="text-gray-600">Pak Aliyudin adalah seorang pengrajin anyaman dari bambu yang terkenal di desanya. Keahliannya dalam membuat berbagai jenis anyaman, seperti Hihid, Tolok, dan Aseupan, telah menjadikannya sosok yang dihormati dan diandalkan oleh warga sekitar. Orang-orang datang ke rumahnya untuk memesan alat-alat anyaman yang mereka butuhkan, baik untuk keperluan rumah tangga maupun acara-acara tradisional. Karya-karyanya tidak hanya indah dan fungsional, tetapi juga mencerminkan kearifan lokal dan tradisi yang telah diwariskan turun-temurun.</p>
+        </div>
+      </div>
+      <div class="grid gap-2 md:grid-cols-6 md:gap-8 md:items-center">
+        <img class="from-gray-200 to-gray-300 bg-gradient-to-br md:aspect-square md:object-cover md:col-span-2" src="/enterprise-owner/Oman.png" alt="Oman">
+        <img class="from-gray-200 to-gray-300 bg-gradient-to-br md:col-span-2" src="/products/product-4.png" alt="Hihid">
+        <div class="grid gap-2 h-max md:row-start-1 md:col-start-1 md:col-span-4 md:row-span-2">
+          <h3 class="font-playfair-display font-bold text-2xl md:text-3xl md:leading-[1.4] lg:text-4xl lg:leading-[1.5]">Bapak Oman</h3>
+          <p class="text-gray-600">Pak Oman dikenal sebagai seorang pengrajin jala yang handal di desanya. Dengan ketelitian dan keahlian yang ia miliki, banyak orang yang mempercayakan pembuatan jala mereka kepadanya. Proses pembuatan jala ini tidaklah sederhana; tergantung pada ukuran dan detail yang diinginkan, Pak Oman bisa menghabiskan waktu berhari-hari hingga berminggu-minggu untuk menyelesaikannya. Kisaran harga jala yang ia buat pun bervariasi, mulai dari 400 ribu hingga 700 ribu rupiah, menyesuaikan dengan ukuran dan kerumitan pekerjaan yang dibutuhkan. Hasil akhirnya selalu memuaskan, menjadi bukti dari dedikasi dan keahlian yang telah ia kembangkan selama bertahun-tahun.</p>
+        </div>
+      </div>
+		</section>
+    <section class="grid items-center gap-6 px-4 py-12 container mx-auto md:grid-cols-2 md:py-16">
+      <div class="grid gap-2">
+        <h2 class="font-playfair-display font-bold text-4xl md:text-4xl md:leading-[1.4] lg:text-5xl lg:leading-[1.5]">Kunjungi Desa Cikakak</h2>
+        <p>
+          Desa Cikakak, yang terletak di Kecamatan Cikakak, Kabupaten Sukabumi, adalah sebuah desa yang kaya akan keindahan alam dan budaya. Desa ini terbagi menjadi 8 RW dan 34 RT, menciptakan komunitas yang erat dan saling mendukung. Salah satu daya tarik utama Desa Cikakak adalah tiga pantai yang dimilikinya, termasuk Pantai Kadaka yang populer di kalangan wisatawan. Topografi desa ini sangat beragam; bagian utara dan selatannya adalah dataran rendah, sementara bagian tengahnya dihiasi oleh perbukitan yang mempesona.
+        </p>
+        <p>
+          Kehidupan masyarakat desa ini sangat bergantung pada sektor pertanian, dengan padi, sayuran, buah-buahan, dan rempah-rempah sebagai komoditas utama yang dihasilkan dari tanah subur yang mereka garap. Kombinasi antara kekayaan alam dan usaha pertanian ini membuat Desa Cikakak menjadi tempat yang harmonis dan produktif.
+        </p>
+      </div>
+      <iframe class="w-full aspect-video" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4147.768741794066!2d106.49996326686556!3d-6.954914848794835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4282c4d0e530bb%3A0xa6108c0dfa022236!2sKantor%20Kepala%20Desa%20Cikakak!5e0!3m2!1sid!2sid!4v1724950999402!5m2!1sid!2sid" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</section>
+  </main>
+</Layout>

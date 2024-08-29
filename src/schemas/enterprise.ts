@@ -5,6 +5,7 @@ export const EnterpriseSchema = z.object({
   owner: z.string(),
   phoneNumber: z.string(),
   category: z.string(),
+  harga: z.string(),
   bannerImg: z.string().optional(),
   mapEmbedUrl: z.string(),
 });
